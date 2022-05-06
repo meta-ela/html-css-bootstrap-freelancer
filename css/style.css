@@ -15,18 +15,21 @@
 
 
 
-/* DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.debug-container {
-    border: 1px dashed red;
-}
-/* DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.section {
-    padding: 2rem 0rem;
+ul li {
+    list-style-type: none;
 }
 
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+}
 
-
+.menu-list:hover a {
+    color: var(--color-green);
+    text-decoration: underline;
+}
 
 .avatar-img {
     width: 150px;
@@ -37,6 +40,10 @@
     height: 3px;
     background-color: white;
     border-radius: 2px;
+}
+
+.bar-black {
+    background-color: black;
 }
 
 .btn.btn-success {
@@ -53,8 +60,16 @@
     color: white;
 }
 
+.card-portfolio {
+    overflow: hidden;
+    border-radius: 10px;
+    border: none;
+    margin: 1rem 0rem;
+}
+
 .card-about {
     background-color: transparent;
+    margin: 1rem 0rem;
 }
 
 .footer-link {
@@ -67,7 +82,36 @@
     text-decoration: underline;
 }
 
+.round {
+    width: 50px;
+    line-height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
 
+.footer-icons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons {
+    width: 250px;
+}
+
+.link-icon {
+    color: white;
+}
+
+.round:hover{
+    border-color: var(--color-green);
+    transform: scale(1.1);
+}
+
+.round:hover .link-icon{
+    color: var(--color-green);
+}
 
 
 
