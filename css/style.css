@@ -23,15 +23,51 @@
 
 .section {
     padding: 2rem 0rem;
-
-    /* DEBUG */
-    border: 1px dashed blue;
 }
 
 
-.avatar-box-img {
-    max-width: 150px;
+
+
+.avatar-img {
+    width: 150px;
 }
+
+.bar {
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.btn.btn-success {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.btn.btn-success:hover {
+    background-color: #2cf7ce;
+    color: var(--color-darkblue);
+}
+
+.text-white {
+    color: white;
+}
+
+.card-about {
+    background-color: transparent;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--color-green);
+}
+
+.footer-link:hover {
+    color: var(--color-green);
+    text-decoration: underline;
+}
+
+
 
 
 
