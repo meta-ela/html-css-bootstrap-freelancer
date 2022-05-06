@@ -6,3 +6,40 @@
     xl: 1200px,
     xxl: 1400px
 */
+
+:root {
+    --color-darkblue: #2c3e50;
+    --color-green: #1abc9c;
+    --color-blue: #3a546d;
+}
+
+
+
+/* DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.debug-container {
+    border: 1px dashed red;
+}
+/* DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.section {
+    padding: 2rem 0rem;
+
+    /* DEBUG */
+    border: 1px dashed blue;
+}
+
+
+
+
+/* classi variabili di root */
+.color-darkblue {
+    background-color: var(--color-darkblue);
+}
+
+.color-green {
+    background-color: var(--color-green);
+}
+
+.color-blue {
+    background-color: var(--color-blue);
+}
