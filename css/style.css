@@ -8,12 +8,24 @@
 */
 
 :root {
-    --color-darkblue: #2c3e50;
-    --color-green: #1abc9c;
-    --color-blue: #3a546d;
+    --bs-primary: #1abc9c;
+    --bs-primary-rgb: 26,188,156;
+
+    --bs-secondary: #3a546d;
+    --bs-secondary-rgb: 58,84,109;
+
+    --bs-dark: #2c3e50;
+    --bs-dark-rgb: 44,62,80;
+
 }
 
 
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
 
 
 ul li {
@@ -27,12 +39,12 @@ li a {
 }
 
 .menu-list:hover a {
-    color: var(--color-green);
+    color: var(--bs-primary);
     text-decoration: underline;
 }
 
 .avatar-img {
-    width: 150px;
+    height: 250px;
 }
 
 .bar {
@@ -46,18 +58,20 @@ li a {
     background-color: black;
 }
 
-.btn.btn-success {
-    background-color: var(--color-green);
-    border-color: var(--color-green);
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
 }
 
-.btn.btn-success:hover {
-    background-color: #2cf7ce;
-    color: var(--color-darkblue);
+.btn.btn-primary:hover {
+    background-color: #13947a;
+    border-color: #1abc9c;
 }
 
-.text-white {
-    color: white;
+.btn-primary:focus:active {
+    box-shadow: 0 0 0 0.25rem rgb(26 188 156 / 50%);
+    background-color:#13947a;
+    border-color: #13947a;
 }
 
 .card-portfolio {
@@ -67,6 +81,38 @@ li a {
     margin: 1rem 0rem;
 }
 
+.card-portfolio:hover {
+    box-shadow: 0 0 0 0.25rem rgb(26 188 156 / 50%);
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px);
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+        transform: rotate(1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px);
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px);
+        transform: rotate(-1deg);
+    }
+}
+
 .card-about {
     background-color: transparent;
     margin: 1rem 0rem;
@@ -74,11 +120,11 @@ li a {
 
 .footer-link {
     text-decoration: none;
-    color: var(--color-green);
+    color: var(--bs-primary);
 }
 
 .footer-link:hover {
-    color: var(--color-green);
+    color: var(--bs-primary);
     text-decoration: underline;
 }
 
@@ -104,26 +150,41 @@ li a {
     color: white;
 }
 
-.round:hover{
-    border-color: var(--color-green);
-    transform: scale(1.1);
-}
-
 .round:hover .link-icon{
-    color: var(--color-green);
+    color: var(--bs-primary);
 }
 
-
-
-/* classi variabili di root */
-.color-darkblue {
-    background-color: var(--color-darkblue);
+.round:hover{
+    border-color: var(--bs-primary);
+    transform: scale(1.1);
+    color: var(--bs-primary);
 }
 
-.color-green {
-    background-color: var(--color-green);
+.form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
 }
 
-.color-blue {
-    background-color: var(--color-blue);
+.form-control:active  {
+    color: var(--bs-primary);
+    background-color: #fff;
+    border-color: var(--bs-primary);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(26 188 156 / 50%);
+    border-radius: .25rem;
+}
+
+.form-control:focus {
+    color: var(--bs-primary);
+    background-color: #fff;
+    border-color: var(--bs-primary);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(26 188 156 / 50%);
+    border-radius: .25rem;
+}
+
+.form-floating>label {
+    padding: .5rem .75rem;
 }
